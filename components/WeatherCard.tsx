@@ -58,7 +58,7 @@ const AirQualityCard = ({ city = "banglore"}:{city?:string}) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
     useEffect(() => {
-        fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&country=india&key=9b8390cacfa94992ac34a38ea0a60cf6`)
+        fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&country=india&key=API_KEY`)
             .then((res) => res.json())
             .then((data) => {
                 setAirQualityData(data);
