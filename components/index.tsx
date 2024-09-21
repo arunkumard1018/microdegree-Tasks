@@ -38,10 +38,10 @@ export default function Home() {
         }
     }, []);
 
+    // Fetching The Data By Accessing Users Browser Location
     useEffect(() => {
         if (latitude && longitude) {
-            // fetch(`https://api.weatherbit.io/v2.0/current?lat=${latitude}&lon=${longitude}&key=YOUR_API_KEY`)
-            fetch(`https://api.weatherbit.io/v2.0/current?city=${"Banglore"}&country=india&key=9b8390cacfa94992ac34a38ea0a60cf6`)
+            fetch(`https://api.weatherbit.io/v2.0/current?lat=${latitude}&lon=${longitude}&key=9b8390cacfa94992ac34a38ea0a60cf6`)
                 .then((res) => res.json())
                 .then((data) => setWeatherData(data))
                 .catch((error) => console.error('Error fetching weather data:', error));
